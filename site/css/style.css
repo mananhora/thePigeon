@@ -8,7 +8,7 @@
 
 body {
     margin-top: 100px;
-    background-color: #222;
+    background-color: white;
 }
 
 @media(min-width:768px) {
@@ -114,6 +114,7 @@ ul.alert-dropdown {
 
 @media(min-width:768px) {
     .side-nav {
+		background-color: black;
         position: fixed;
         top: 51px;
         left: 225px;
@@ -153,7 +154,9 @@ ul.alert-dropdown {
 .side-nav>li>ul>li>a:hover {
     color: #fff;
 }
-
+#sidebar-button{
+	margin: 10px;
+}
 /* Flot Chart Containers */
 
 .flot-chart {
