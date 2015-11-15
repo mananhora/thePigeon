@@ -23,6 +23,14 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script>
+    function sendLetter(){
+      //function to send the text from the letter to the server..
+      var letter = $("#letter").val();
+
+    }
+    </script>
+
 </head>
 
 <body>
@@ -68,7 +76,8 @@
         <div id="page-wrapper">
 
             <div class="container-fluid">
-
+              <textarea placeholder="Type your letter here.." id = "letter" name="paragraph_text" cols="100" rows="10"></textarea>
+              <button onclick = "sendLetter()">BroadCast</button>
 
             </div>
             <!-- /.container-fluid -->
