@@ -14,12 +14,12 @@
     <link href="css/plugins/morris.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
     $("#registerButton").click(function(){
-        $.ajax({ url: "server/register.php",
+        $.ajax({ url: "../server/register.php",
               type: "POST",
               dataType: "text",
               data:{firstname:$("#fname"), lastname: $("#lname").val(), email: $("#email").val(), password: $("#password").val()},

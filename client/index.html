@@ -33,12 +33,13 @@
       $("#posts").show();
 
      $("#logInButton").click(function(){
-       $.ajax({ url: "server/login.php",
+       $.ajax({ url: "../server/login.php",
              type: "POST",
              dataType: "text",
-
-
-           });
+             data:{email: $("#email").val(), password: $("#password").val()},
+             success: function(result){
+               alert('Success! Welcome!'+ result);
+           }});
        loggedIn= true;
        $(".login").hide();
        $("#posts").show();
