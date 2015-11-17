@@ -31,7 +31,8 @@
                dataType: "text",
                data:{letter: $("#letter").val()},
                success: function(result){
-                 alert('Success! LETTER BROADCASETED'+ result);
+                 alert('Success! LETTER BROADCASTED'+ result);
+                 $("#sendLetter").hide();
              }});
 
        });
@@ -82,11 +83,14 @@
 
         <div id="page-wrapper">
 
+
+<div id = "sendLetter">
             <div class="container-fluid">
               <textarea placeholder="Type your letter here.." id = "letter" name="paragraph_text" cols="100" rows="10"></textarea>
               <button id = "sendButton">BroadCast</button>
 
             </div>
+          </div>
             <!-- /.container-fluid -->
 
         </div>

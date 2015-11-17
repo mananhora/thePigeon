@@ -33,6 +33,15 @@
       $("#posts").show();
 
      $("#logInButton").click(function(){
+       var $div2 = $("#loginMessage");
+     if ($div2.is(":visible")) { return; }
+     $div2.show();
+     setTimeout(function() {
+         $div2.hide();
+     }, 10000);
+     loggedIn= true;
+     $(".login").hide();
+     $("#posts").show();
        $.ajax({ url: "../server/login.php",
              type: "POST",
              dataType: "text",
@@ -40,10 +49,10 @@
              success: function(result){
                alert('Success! Welcome!'+ result);
            }});
-       loggedIn= true;
-       $(".login").hide();
-       $("#posts").show();
+
      });
+
+
 
 
      $("#signUpButton").click(function(){
@@ -127,6 +136,7 @@
                         </div>
                     </div>
                 </div>
+                <p id = "loginMessage" style="display:none">You are now logged in</p>
                 <div id = "posts">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                         <div class="panel panel-red">
