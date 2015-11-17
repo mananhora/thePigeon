@@ -24,11 +24,18 @@
     <![endif]-->
 
     <script>
-    function sendLetter(){
-      //function to send the text from the letter to the server..
-      var letter = $("#letter").val();
+    $(document).ready(function(){
+   $("#sendButton").click(function(){
+         $.ajax({ url: "../server/broadcast.php",
+               type: "POST",
+               dataType: "text",
+               data:{letter: $("#letter").val()},
+               success: function(result){
+                 alert('Success! LETTER BROADCASETED'+ result);
+             }});
 
-    }
+       });
+
     </script>
 
 </head>
@@ -77,7 +84,7 @@
 
             <div class="container-fluid">
               <textarea placeholder="Type your letter here.." id = "letter" name="paragraph_text" cols="100" rows="10"></textarea>
-              <button onclick = "sendLetter()">BroadCast</button>
+              <button id = "sendButton">BroadCast</button>
 
             </div>
             <!-- /.container-fluid -->
