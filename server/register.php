@@ -23,7 +23,7 @@
    if(!$ret){
       echo $db->lastErrorMsg();
    } else {
-      echo "Account created successfully.";
+      echo "success";
    }
    $db->close();
 ?>
