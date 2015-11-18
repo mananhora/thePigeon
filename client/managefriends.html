@@ -52,28 +52,27 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i>Destinations</a>
+                    <li>
+                        <a href="index.html"><span class="glyphicon glyphicon-ok padding-icon"></span>Destinations</a>
                     </li>
-					<li>
-					</li>
-                        <div class="panel panel-primary">
                     <li class="active">
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i>Destinations</a>
-                    </li>							<div class="panel-body">
-
-								<a> Settings </a>
-							<a href = "broadCast.html"><button> Create Broadcast </button></a>
-						</div>
-						</div>
+                        <a href="managefriends.html"><span class="glyphicon glyphicon-star padding-icon"></span>Manage Friends</a>
+                    </li>
+                    <li>
+                        <a href="settings.html"><span class="glyphicon glyphicon-envelope padding-icon"></span>  Settings</a>
+                    </li>
+					<a href= "broadcast.html">
+						<button type="button" class="btn btn-default btn-md" id="sidebar-button">
+							<span class="glyphicon glyphicon-star padding-icon" aria-hidden="true"></span>
+							Create Broadcast
+						</button>
+					</a>
                 </ul>
-
 			</div>
             <!-- /.navbar-collapse -->
         </nav>
 
-        <div id="page-wrapper">
-
+        <div class="content-container">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
@@ -85,6 +84,24 @@
                         </div>
                     </div>
                 </div>
+				
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- content-container -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
                 <!-- /.row -->
 
 <!--                <div class="row">
@@ -255,20 +272,3 @@
                     </div>
                 </div>
                 <!-- /.row -->
-
-            </div>
-            <!-- /.container-fluid -->
-
-        </div>
-        <!-- /#page-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-</body>
-</html>

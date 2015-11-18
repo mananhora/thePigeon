@@ -31,14 +31,30 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+        <div class="content-container">
+			<div class="container-fluid">
+			  <h1>thePigeon Registration</h1>
+				<div class="input-group input-group-lg">
+				  <span class="input-group-addon" id="sizing-addon1">First Name</span>
+				  <input id="fname" type="text" class="form-control" placeholder="First Name" aria-describedby="sizing-addon1">
+				</div>
+				<div class="input-group input-group-lg">
+				  <span class="input-group-addon" id="sizing-addon1">Last Name</span>
+				  <input id="lname" type="text" class="form-control" placeholder="Last Name" aria-describedby="sizing-addon1">
+				</div>
+				<div class="input-group input-group-lg">
+				  <span class="input-group-addon" id="sizing-addon1">Email</span>
+				  <input id="email" type="text" class="form-control" placeholder="Email" aria-describedby="sizing-addon1">
+				</div>
+				<div class="input-group input-group-lg">
+				  <span class="input-group-addon" id="sizing-addon1">Password</span>
+				  <input id="password" type="text" class="form-control" placeholder="Password" aria-describedby="sizing-addon1">
+				</div>
+					<button id = "registerButton" type="button" class="btn btn-warning custom-button">Register!</button>
+			</div>
+            <!-- /.container-fluid -->
 
-
-  <h1>thePigeon Registration</h1>
-  Type in your first name: <input id = "fname" type="text" placeholder="e.g. John"/><br>
-  Type in your last name: <input id = "lname" type="text" placeholder="e.g. Smith"/><br>
-  Type in your email: <input id = "email" type = "text" placeholder="e.g. john.smith@gmail.com"/><br>
-  Type in your password: <input id = "password" type = "password"/><br>
-  <button id = "registerButton">Register</button>
+        </div>
 
 </body>
 </html>

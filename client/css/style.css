@@ -8,7 +8,7 @@
 
 body {
     margin-top: 100px;
-    background-color: white;
+    background-color: #E7C6A5;
 }
 
 @media(min-width:768px) {
@@ -154,9 +154,7 @@ ul.alert-dropdown {
 .side-nav>li>ul>li>a:hover {
     color: #fff;
 }
-#sidebar-button{
-	margin: 10px;
-}
+
 /* Flot Chart Containers */
 
 .flot-chart {
@@ -227,4 +225,51 @@ ul.alert-dropdown {
 
 .panel-yellow > a:hover {
     color: #df8a13;
+}
+
+/* additional stuff */
+.custom-button{
+	margin: 10px;
+	width: 200px;
+	text-align: center;
+	height: 50px;
+}
+
+.custom-navbar{
+	text-align:center;
+}
+
+.padding-icon{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.content-container{
+	text-align: center;
+	margin: 5%;
+}
+
+/* broadcast */
+#letter{
+	width: 100%;
+	margin-top: 3%;
+}
+#submitbutton{
+	float:bottom;
+	margin-top: 10px;
+}
+#sidebar-button{
+	margin: 10px;
+	width: 200px;
+	text-align: center;
+	height: 50px;
+}
+.input-group{
+	margin-top: 10px;
+}
+
+/* login */
+
+.home-button{
+}
+.home-buttons{
 }
