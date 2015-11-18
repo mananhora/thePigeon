@@ -20,13 +20,13 @@
 $(document).ready(function(){
     $("#registerButton").click(function(){        
         //$.ajax({ url: "../server/register.php",
-          $.ajax({ url: "../server/test.php",
+          $.ajax({ url: "../server/register.php",
               type: "POST",
               dataType: "text",
               // Data that will be sent as an input to the test.php script.
               data:{firstname:$("#fname").val(), lastname: $("#lname").val(), email: $("#email").val(), password: $("#password").val()},
               success: function(result){
-                alert('Success! Welcome!'+result);
+                alert(result);                
         }});
     });
 });
