@@ -47,6 +47,14 @@
              dataType: "text",
              data:{email: $("#email").val(), password: $("#password").val()},
              success: function(result){
+               // Username/password combination not found in the database.
+               if(result == ''){
+                  console.log("Username/password not found.");
+               // Username/password found in the database.
+               }else{
+                  console.log("Username/password was found.");
+                  localStorage['userloggedin'] = result;
+               }               
                alert('Success! Welcome!'+ result);
            }});
 
