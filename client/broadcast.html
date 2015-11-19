@@ -30,7 +30,7 @@
                 $.ajax({ url: "../server/broadcast.php",
                 type: "POST",
                 dataType: "text",
-                data:{letter: $("#letter").val()},
+                data:{usernameVal: localStorage["userloggedin"], letter: $("#letter").val()},
                 success: function(result){
                     alert('Success! LETTER BROADCASTED'+ result);
                     $("#sendLetter").hide();

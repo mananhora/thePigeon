@@ -13,17 +13,15 @@
    } else {
       //echo "Opened database successfully\n";
    }
-   echo "broadcast";
    // Data obtained from AJAX:
    // 1. $_POST["usernameVal"];
    // 2. $_POST["letter"];
-   //echo $_POST["usernameVal"];
-   /*$sql = "INSERT INTO user (username, password, firstname, lastname) VALUES ('".$_POST["email"]."', '".$_POST["password"]."', '".$_POST["firstname"]."', '".$_POST["lastname"]."')";
+   $sql = "INSERT INTO letter (content, userid) VALUES ("."'".$_POST["letter"]."'".", '".$_POST["usernameVal"]."')";
    $ret = $db->exec($sql);
    if(!$ret){
       echo $db->lastErrorMsg();
    } else {
-      echo "Your account was created successfully.";
+      echo "Letter stored successfully.";
    }
-   $db->close();*/
+   $db->close();   
 ?>
