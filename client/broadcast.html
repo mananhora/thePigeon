@@ -15,6 +15,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/plugins/morris.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,19 +25,18 @@
     <![endif]-->
 
     <script>
-    $(document).ready(function(){
-   $("#sendButton").click(function(){
-         $.ajax({ url: "../server/broadcast.php",
-               type: "POST",
-               dataType: "text",
-               data:{letter: $("#letter").val()},
-               success: function(result){
-                 alert('Success! LETTER BROADCASTED'+ result);
-                 $("#sendLetter").hide();
-             }});
-
+        $(document).ready(function(){
+            $("#sendButton").click(function(){
+                $.ajax({ url: "../server/broadcast.php",
+                type: "POST",
+                dataType: "text",
+                data:{letter: $("#letter").val()},
+                success: function(result){
+                    alert('Success! LETTER BROADCASTED'+ result);
+                    $("#sendLetter").hide();
+                }});        
+            });
        });
-
     </script>
 
 </head>
