@@ -16,7 +16,6 @@
     <link href="css/plugins/morris.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -74,6 +73,8 @@
                         <a href="managefriends.html"><span class="glyphicon glyphicon-star padding-icon"></span>Manage Friends</a>
                     </li>
                     <li>
+                        <a href="groups.html"><span class="glyphicon glyphicon-envelope padding-icon active"></span>  Groups</a>
+                    </li>                    <li>
                         <a href="settings.html"><span class="glyphicon glyphicon-envelope padding-icon"></span>  Settings</a>
                     </li>
 					<a href= "broadcast.html"  class="active">
@@ -92,7 +93,7 @@
 				<div class="container-fluid">
 					<div id="groups">
 							<div class="btn-group" id="groupsdropdown">
-						  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="groupsbutton">Select Group(s) <span class="caret"></span></button>
+						  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="groupsbutton">Select Group <span class="caret"></span></button>
 						  <ul class="dropdown-menu">
 
 							<li><a href="#" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 1</a></li>	
@@ -111,16 +112,30 @@
 							<input id="groupprint" type="text" class="form-control" placeholder="Groups" aria-describedby="sizing-addon1">					
 						</div>
 						</div><!-- /btn-group -->	
-	
-	
+					</div>
+					<div id="friends">
+					      
+
+				<!-- Source: http://bootsnipp.com/snippets/X0RdWb -->
+							 <div class="well friends" style="max-height: 300px;overflow: auto;">
+								<ul class="list-group checked-list-box">
+									<li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Friend #1</li>
+								  <li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Friend #2</li>
+									<li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Friend #3</li>
+								  <li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Friend #4</li>
+									<li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Friend #5</li>
+								  <li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Friend #6</li>
+								  <li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Friend #7</li>
+								  <li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Friend #8</li>
+								</ul>
 
 					</div>
+				
+            </div>
+        </div>
 
-					<div class="form-group">
-						<textarea class="form-control" placeholder="Type your letter here..." id = "letter" name="paragraph_text" cols="10" rows="25"></textarea>
-					</div>
 
-					<button id = "sendButton" type="button" class="btn btn-danger custom-button">Send Broadcast!</button>
+					<button id = "sendButton" type="button" class="btn btn-danger custom-button">Save!</button>
 				</div>
 			</div>
             <!-- /.container-fluid -->

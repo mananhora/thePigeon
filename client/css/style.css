@@ -252,6 +252,9 @@ ul.alert-dropdown {
 #letter{
 	width: 100%;
 	margin-top: 3%;
+	background-image: url('../images/lettertemplate.png');
+    background-size: 470px 500px;
+	
 }
 #submitbutton{
 	float:bottom;
@@ -266,10 +269,39 @@ ul.alert-dropdown {
 .input-group{
 	margin-top: 10px;
 }
+#groupsbutton{
+	height: 50px;
+	margin-top: 10px;
+}
+#groupprint{
+	float: top;
+}
 
 /* login */
 
 .home-button{
 }
 .home-buttons{
+}
+
+/* Groups */
+.state-icon {
+    left: -5px;
+}
+.list-group-item-primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(66, 139, 202);
+}
+
+.well .list-group {
+    margin-bottom: 0px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#friends{
+	margin-top: 10px;
+}
+.friendcheckbox{
+	padding-right: 10px;
 }
