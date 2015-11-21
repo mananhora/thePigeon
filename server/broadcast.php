@@ -54,5 +54,6 @@
       } 
    }
    $db->close();
-   echo "Before".$receiveruserid."After".$sqlfriendrequestid."Now".$sqlsendletter;
+   //echo "Before".$receiveruserid."After".$sqlfriendrequestid."Now".$sqlsendletter;
+   echo "Broadcast completed.";
 ?>
