@@ -8,7 +8,7 @@
 
 body {
     margin-top: 100px;
-    background-color: #E7C6A5;
+    background-color: #654321;
 }
 
 @media(min-width:768px) {
@@ -250,11 +250,16 @@ ul.alert-dropdown {
 
 /* broadcast */
 #letter{
-	width: 100%;
+	width: 50%;
 	margin-top: 3%;
-	background-image: url('../images/lettertemplate.png');
-    background-size: 470px 500px;
-	
+	background-color: #D1CCAA;
+/*	background-image: url('../images/letters.jpg');
+	background-repeat: no-repeat; */
+	margin-left: 25%;
+	margin-right: 25%;
+}
+.container-fluid{
+	text-align: center;
 }
 #submitbutton{
 	float:bottom;
@@ -304,4 +309,26 @@ ul.alert-dropdown {
 }
 .friendcheckbox{
 	padding-right: 10px;
+}
+#posts .panel-body{
+	font-size: 20px;
+	height: 150px;
+	background-image: url('../images/letterone.jpg');
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.modal-content{
+	background-image: url('../images/letters.jpg');
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+	
+
+
+}
+#broadcaster{
+    margin-top: 100px;
+    background-color: #654321;
+	background-image: url('../images/background.jpg');
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
