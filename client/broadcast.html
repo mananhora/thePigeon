@@ -34,6 +34,7 @@
                 success: function(result){
                     alert('Success! LETTER BROADCASTED'+ result);
                     $("#sendLetter").hide();
+                    $("#sent").append("A pigeon is on its way to deliver your letter.");
                 }});        
             });
        });
@@ -123,6 +124,7 @@
 					<button id = "sendButton" type="button" class="btn btn-danger custom-button">Send Broadcast!</button>
 				</div>
 			</div>
+            <div id = "sent"></div>
             <!-- /.container-fluid -->
 
         </div>
