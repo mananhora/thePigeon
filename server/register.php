@@ -23,7 +23,7 @@
    if(!$ret){
       echo $db->lastErrorMsg();
    } else {
-      echo "Your account was created successfully.";
+      echo " Sweet! You can now send pigeon posts! ";
    }
    $db->close();
 ?>
