@@ -41,6 +41,11 @@
    INSERT INTO mailbox(letterid, senderuserid, receiveruserid) VALUES (3, 3, 1);
    INSERT INTO mailbox(letterid, senderuserid, receiveruserid) VALUES (3, 3, 2);
    ";
+   // 6. Populate FRIENDREQUEST table.
+   $sql .= "
+   INSERT INTO friendrequest(senderuserid, receiveruserid) VALUES (1, 2);
+   INSERT INTO friendrequest(senderuserid, receiveruserid) VALUES (1, 3);
+   ";
    $ret = $db->exec($sql);
    if(!$ret){
       echo $db->lastErrorMsg();
