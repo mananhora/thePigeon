@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">
@@ -11,6 +10,7 @@
 
     <title>The Pigeon</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -24,13 +24,40 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script>
-$(document).ready(function(){
+  <script>
 
 
-}
+  var loggedIn = false;
+  $(document).ready(function(){
+    if(!loggedIn)
+      $("#posts").hide();
+    if(loggedIn)
+      $("#posts").show();
 
-    </script>
+
+       var $div2 = $("#loginMessage");
+     if ($div2.is(":visible")) { return; }
+     $div2.show();
+     setTimeout(function() {
+         $div2.hide();
+     }, 10000);
+     loggedIn= true;
+     $(".login").hide();
+     $("#posts").show();
+
+
+
+
+
+
+
+     $("#signUpButton").click(function(){
+       window.location.href = "registration.html";
+     });
+  });
+
+
+  </script>
 
 </head>
 
@@ -50,10 +77,15 @@ $(document).ready(function(){
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 			  <ul class="nav navbar-nav">
-				<li><a href="#ourmission">About</a></li>
-
 			  </ul>
 			  <ul class="nav navbar-nav navbar-right">
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+						  <input type="text" class="form-control" placeholder="Search Friends">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					  </form>
+				<li><a href="#ourmission">Log Out </a></li>
 				<li><a href="#top">Top</a></li>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
@@ -61,15 +93,16 @@ $(document).ready(function(){
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li>
-                        <a href="index.html"><span class="glyphicon glyphicon-ok padding-icon"></span>Destinations</a>
-                    </li>
                     <li class="active">
-                        <a href="managefriends.html"><span class="glyphicon glyphicon-star padding-icon"></span>Manage Friends</a>
+                        <a href="index.html"><span class="glyphicon glyphicon-envelope padding-icon"></span>Inbox- Pigeon Letters</a>
                     </li>
                     <li>
-                        <a href="settings.html"><span class="glyphicon glyphicon-envelope padding-icon"></span>  Settings</a>
+                        <a href="groups.html"><span class="glyphicon glyphicon-send padding-icon"></span>Groups</a>
                     </li>
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-ok padding-icon"></span> Settings</a>
+                    </li>
+					<li><a href="#ourmission"><span class="glyphicon glyphicon-ok padding-book"></span> About Us</a></li>
 					<a href= "broadcast.html">
 						<button type="button" class="btn btn-default btn-md" id="sidebar-button">
 							<span class="glyphicon glyphicon-star padding-icon" aria-hidden="true"></span>
@@ -85,35 +118,150 @@ $(document).ready(function(){
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="alert alert-info alert-dismissable">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <i class="fa fa-info-circle"></i> <a href="" class="alert-link">Test</a>
-                            <input id = "Friends" placeholder="Search for your friends on thePigeon.." name="paragraph_text" cols="80" rows="1"></textarea>
-                            <br><button style id = "searchFriends">Search</button>
-                        </div>
+                      
                     </div>
                 </div>
+                <p id = "loginMessage" style="display:none">You are now logged in</p>
+                <div id = "posts">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="panel panel-red">
+                            <div class="panel-body">
+                                    <span>Jenna</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" type="button"  data-toggle="modal" data-target="#myModal" >
+                        <div class="panel panel-green">
+                            <div class="panel-body">
+                                    <span>Sar</span>
+                            </div>
+                        </div>
+                    </div>
+					<!-- Modal -->
+					<div id="myModal" class="modal fade" role="dialog">
+					  <div class="modal-dialog">
 
-            </div>
-            <!-- /.container-fluid -->
+						<!-- Modal content-->
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Letter from Sar</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><strong>Hope all is well. It has been two months into my fall semester at Rochester. I finally came to realize that I do not want to major in Computer Science. I also discovered an inclination towards writing. I regularly blog now. I had some issues with my class schedule in the beginning but all is good now. I am making a cool project for my HCI class with a team of four people. I have midterms coming up next week. I will be coming back home for Thanksgiving. Take care.</strong></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						  </div>
+						</div>
 
-        </div>
-        <!-- content-container -->
+					  </div>
+					</div>
 
-    </div>
-    <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
 
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" type="button"  data-toggle="modal" data-target="#myModal2">
+                        <div class="panel panel-yellow">
+                            <div class="panel-body">
+                                    <span>Alice</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+          					<div id="myModal2" class="modal fade" role="dialog">
+          					  <div class="modal-dialog">
+
+          						<!-- Modal content-->
+          						<div class="modal-content">
+          						  <div class="modal-header">
+          							<button type="button" class="close" data-dismiss="modal">&times;</button>
+          							<h4 class="modal-title">Letter from Alice</h4>
+          						  </div>
+          						  <div class="modal-body">
+          							<p><strong>Hope all is well. It has been two months into my fall semester at Rochester. I finally came to realize that I do not want to major in Computer Science. I also discovered an inclination towards writing. I regularly blog now. I had some issues with my class schedule in the beginning but all is good now. I am making a cool project for my HCI class with a team of four people. I have midterms coming up next week. I will be coming back home for Thanksgiving. Take care.</strong></p>
+          						  </div>
+          						  <div class="modal-footer">
+          							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          						  </div>
+          						</div>
+
+          					  </div>
+          					</div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="panel panel-red">
+                            <div class="panel-body">
+                                    <span>Manan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" data-target="#myModal">
+                        <div class="panel panel-green">
+                            <div class="panel-body">
+                                    <span>Marianna</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="panel panel-yellow">
+                            <div class="panel-body">
+                                    <span>Jaime</span>
+                            </div>
+                        </div>
+                    </div>
+					                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="panel panel-yellow">
+                            <div class="panel-body">
+                                    <span>Jenna</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="panel panel-red">
+                            <div class="panel-body">
+                                    <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" data-target="#myModal2">
+                        <div class="panel panel-green">
+                            <div class="panel-body">
+                                    <span>Sar</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                  </div>
+                  </div>
                 <!-- /.row -->
 
-<!--                <div class="row">
+			<div class="row">
+					<div class = "login">
+					<div class="input-group input-group-lg">
+					  <span class="input-group-addon" id="sizing-addon1">Email</span>
+					  <input id="email" type="text" class="form-control" placeholder="Email" aria-describedby="sizing-addon1">
+					</div>
+					<div class="input-group input-group-lg">
+					  <span class="input-group-addon" id="sizing-addon1">Password</span>
+					  <input id="password" type="text" class="form-control" placeholder="Password" aria-describedby="sizing-addon1">
+					</div>
+					<div class="home-buttons">
+						<button id = "signUpButton" type="button" class="btn btn-warning custom-button home-button">Sign Up!</button>
+						<button id = "logInButton" type="button" class="btn btn-warning custom-button home-button">Log In</button>
+						<button id = "changeNameButton" style="display:none">Change Name</button>
+						<input id = "updateName" style="display:none" placeholder="type name..">
+					</div>
+					<p> Don't have an account? </p>
+				</div><!--LOGIN-->
+			</div>
+
+
+
+
+
+               <!-- <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
@@ -202,7 +350,7 @@ $(document).ready(function(){
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- /.row -->
 
 <!--                <div class="row">
@@ -281,3 +429,20 @@ $(document).ready(function(){
                     </div>
                 </div>
                 <!-- /.row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

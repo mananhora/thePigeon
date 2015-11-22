@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +16,6 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/plugins/morris.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -33,9 +33,27 @@
                 success: function(result){
                     alert('Success! LETTER BROADCASTED'+ result);
                     $("#sendLetter").hide();
-                }});        
+                }});
             });
+
+          $("#groupsbutton").click(function(){
+            // var selected = $(".grouplist option:selected");
+            // console.log(selected);
+            $("#groupprint").text("FAMILY");
+            var selected=   $("#grouplist :selected").val();
+            console.log(selected);
+
        });
+
+
+
+//        $('#grouplist option').each(function() {
+//     if ($(this).isChecked())
+//        alert('this option is selected');
+//      else
+//        alert('this is not');
+// });
+     });
     </script>
 
 </head>
@@ -52,7 +70,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </button>
-			  <a class="navbar-brand" href="#">The Pigeon</a>
+			  <a class="navbar-brand" href="index.html">The Pigeon</a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 			  <ul class="nav navbar-nav">
@@ -94,27 +112,28 @@
 					<div id="groups">
 							<div class="btn-group" id="groupsdropdown">
 						  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="groupsbutton">Select Group <span class="caret"></span></button>
-						  <ul class="dropdown-menu">
+						  <ul id ="grouplist" class="dropdown-menu">
 
-							<li><a href="#" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 1</a></li>	
+							<li><a href="#" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 1</a></li>
 							<li><a href="#" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 2</a></li>
-						
+
 						<li role="separator" class="divider"></li>
 
 							<li><a href="#">Group 1</a></li>
 							<li><a href="#">Group 2</a></li>
-							<li><a href="#">Group 3</a></li>	
+							<li><a href="#">Group 3</a></li>
 
 						</ul>
 						</div><!-- /btn-group -->
 							<div class="btn-group">
 						<div class="input-group input-group-lg">
-							<input id="groupprint" type="text" class="form-control" placeholder="Groups" aria-describedby="sizing-addon1">					
+              <p id= "test"></p>
+							<p id="groupprint" type="text" class="form-control"  aria-describedby="sizing-addon1">Groups</p>
 						</div>
-						</div><!-- /btn-group -->	
+						</div><!-- /btn-group -->
 					</div>
 					<div id="friends">
-					      
+
 
 				<!-- Source: http://bootsnipp.com/snippets/X0RdWb -->
 							 <div class="well friends" style="max-height: 300px;overflow: auto;">
@@ -130,7 +149,7 @@
 								</ul>
 
 					</div>
-				
+
             </div>
         </div>
 

@@ -25,7 +25,20 @@
     <![endif]-->
 
     <script>
+    var prompts = ['What has changed in your life since you last spoke with them? It could be a change in job or new hobbies that you picked up. '
+    ,'Sharing instances of vulnerability get people closer','Is there any core change in beliefs or thoughts that you would like to share?',
+    'Do you have some work that you would like to get some honest feedback on?',
+    'Have you had any experiences lately that made you reflect on your actions and path?',
+    'Sharing personal struggles with friends, family or colleagues can be really helpful',
+    'Checking in with your loved ones regularly keeps your relationships fresh and healthy'];
         $(document).ready(function(){
+
+          $("#promptsButton").click(function(){
+            var i = Math.floor((Math.random() * 7) + 1);
+            $("#prompts").text(prompts[i]);
+            $("#letter").attr("placeholder", prompts[i]);
+          });
+
             $("#sendButton").click(function(){
                 $.ajax({ url: "../server/broadcast.php",
                 type: "POST",
@@ -35,7 +48,7 @@
                     alert('Success! LETTER BROADCASTED'+ result);
                     $("#sendLetter").hide();
                     $("#sent").append("A pigeon is on its way to deliver your letter.");
-                }});        
+                }});
             });
        });
     </script>
@@ -54,7 +67,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </button>
-			  <a class="navbar-brand" href="#">The Pigeon</a>
+			  <a class="navbar-brand" href="index.html">The Pigeon</a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 			  <ul class="nav navbar-nav">
@@ -80,7 +93,7 @@
 					<a href= "broadcast.html"  class="active">
 						<button type="button" class="btn btn-default btn-md" id="sidebar-button">
 							<span class="glyphicon glyphicon-star padding-icon" aria-hidden="true"></span>
-							Create Broadcast
+							Create Letter
 						</button>
 					</a>
                 </ul>
@@ -96,32 +109,35 @@
 						  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="groupsbutton">Select Group(s) <span class="caret"></span></button>
 						  <ul class="dropdown-menu">
 
-							<li><a href="#" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 1</a></li>	
+							<li><a href="#" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 1</a></li>
 							<li><a href="#" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 2</a></li>
-						
+
 						<li role="separator" class="divider"></li>
 
 							<li><a href="#">Group 1</a></li>
 							<li><a href="#">Group 2</a></li>
-							<li><a href="#">Group 3</a></li>	
+							<li><a href="#">Group 3</a></li>
 
 						</ul>
 						</div><!-- /btn-group -->
 							<div class="btn-group">
 						<div class="input-group input-group-lg">
-							<input id="groupprint" type="text" class="form-control" placeholder="Groups" aria-describedby="sizing-addon1">					
+							<input id="groupprint" type="text" class="form-control" placeholder="Groups" aria-describedby="sizing-addon1">
 						</div>
-						</div><!-- /btn-group -->	
-	
-	
+						</div><!-- /btn-group -->
+
+
 
 					</div>
 
 					<div class="form-group">
-						<textarea class="form-control" placeholder="Type your letter here..." id = "letter" name="paragraph_text" cols="10" rows="20"></textarea>
+						<textarea id = "letter" class="form-control" placeholder="Type your letter here..." id = "letter" name="paragraph_text" cols="10" rows="20"></textarea>
 					</div>
 
-					<button id = "sendButton" type="button" class="btn btn-danger custom-button">Send Broadcast!</button>
+					<button id = "sendButton" type="button" class="btn btn-danger custom-button">Broadcast it!</button>
+          <button id = "promptsButton" type="button" class="btn btn-danger custom-button">Get prompts</button>
+          <p id = "prompts"></p>
+
 				</div>
 			</div>
             <div id = "sent"></div>
