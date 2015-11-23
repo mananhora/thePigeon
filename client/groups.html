@@ -36,10 +36,10 @@
                 }});
             });
 
-          $("#groupsbutton").click(function(){
+          $("#groupoption").click(function(){
             // var selected = $(".grouplist option:selected");
             // console.log(selected);
-            $("#groupprint").text("FAMILY");
+            $("#groupprint").text("Family");
             var selected=   $("#grouplist :selected").val();
             console.log(selected);
 
@@ -70,13 +70,19 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </button>
-			  <a class="navbar-brand" href="index.html">The Pigeon</a>
+			  <a class="navbar-brand" href="letters.html">The Pigeon</a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 			  <ul class="nav navbar-nav">
-				<li><a href="#ourmission">About Us</a></li>
 			  </ul>
 			  <ul class="nav navbar-nav navbar-right">
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+						  <input type="text" class="form-control" placeholder="Search Friends">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					  </form>
+				<li><a href="index.html">Log Out </a></li>
 				<li><a href="#top">Top</a></li>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
@@ -85,22 +91,22 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="index.html"><span class="glyphicon glyphicon-ok padding-icon"></span>Destinations</a>
+                        <a href="index.html"><span class="glyphicon glyphicon-envelope padding-icon"></span> Inbox- Pigeon Letters</a>
+                    </li>
+                    <li class="active">
+                        <a href="letters.html"><span class="glyphicon glyphicon-star padding-icon"></span> Groups</a>
                     </li>
                     <li>
-                        <a href="managefriends.html"><span class="glyphicon glyphicon-star padding-icon"></span>Manage Friends</a>
+                        <a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a>
                     </li>
-                    <li>
-                        <a href="groups.html"><span class="glyphicon glyphicon-envelope padding-icon active"></span>  Groups</a>
-                    </li>                    <li>
-                        <a href="settings.html"><span class="glyphicon glyphicon-envelope padding-icon"></span>  Settings</a>
-                    </li>
-					<a href= "broadcast.html"  class="active">
+					<li><a href=""><span class="glyphicon glyphicon-send padding-icon"></span> About Us</a></li>
+					<a href= "broadcast.html">
 						<button type="button" class="btn btn-default btn-md" id="sidebar-button">
-							<span class="glyphicon glyphicon-star padding-icon" aria-hidden="true"></span>
+							<span class="glyphicon glyphicon-asterisk padding-icon" aria-hidden="true"></span>
 							Create Broadcast
 						</button>
 					</a>
+					<img class="logo" src="images/logo.gif"/>
                 </ul>
 			</div>
             <!-- /.navbar-collapse -->
@@ -114,15 +120,11 @@
 						  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="groupsbutton">Select Group <span class="caret"></span></button>
 						  <ul id ="grouplist" class="dropdown-menu">
 
-							<li><a href="#" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 1</a></li>
-							<li><a href="#" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 2</a></li>
+							<li><a href="#" data-value="option1" tabIndex="-1" id="groupoption"><input type="checkbox"/>&nbsp;Family</a></li>
+							<li><a href="#" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp;Close Friends</a></li>
 
 						<li role="separator" class="divider"></li>
-
-							<li><a href="#">Group 1</a></li>
-							<li><a href="#">Group 2</a></li>
-							<li><a href="#">Group 3</a></li>
-
+							<li><a href="#">New</a></li>
 						</ul>
 						</div><!-- /btn-group -->
 							<div class="btn-group">
@@ -138,14 +140,14 @@
 				<!-- Source: http://bootsnipp.com/snippets/X0RdWb -->
 							 <div class="well friends" style="max-height: 300px;overflow: auto;">
 								<ul class="list-group checked-list-box">
-									<li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Friend #1</li>
-								  <li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Friend #2</li>
-									<li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Friend #3</li>
-								  <li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Friend #4</li>
-									<li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Friend #5</li>
-								  <li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Friend #6</li>
-								  <li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Friend #7</li>
-								  <li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Friend #8</li>
+									<li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>George Washington</li>
+								  <li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>John Adams</li>
+									<li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Thomas Jefferson</li>
+								  <li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>James Madison</li>
+									<li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>James Monroe</li>
+								  <li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>John Quincy Adams</li>
+								  <li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Andrew Jackson</li>
+								  <li class="list-group-item"><span class="friendcheckbox"><input type="checkbox"></span>Martin Van Buren</li>
 								</ul>
 
 					</div>

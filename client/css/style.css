@@ -9,6 +9,10 @@
 body {
     margin-top: 100px;
     background-color: #654321;
+		background-image: url('../images/browntexture.jpg');
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+	height: 1000px;
 }
 
 @media(min-width:768px) {
@@ -285,8 +289,10 @@ ul.alert-dropdown {
 /* login */
 
 .home-button{
-}
-.home-buttons{
+	margin-left: 6%;
+	margin-right: 6%;
+	margin-top: 3%;
+	text-align:center;
 }
 
 /* Groups */
@@ -321,9 +327,7 @@ ul.alert-dropdown {
 	background-image: url('../images/letters.jpg');
 	background-repeat: no-repeat;
     background-size: 100% 100%;
-	
-
-
+	margin-top:25%;
 }
 #broadcaster{
     margin-top: 100px;
@@ -331,4 +335,57 @@ ul.alert-dropdown {
 	background-image: url('../images/background.jpg');
 	background-repeat: no-repeat;
     background-size: 100% 100%;
+
+}
+.login{
+
+}
+.login-container{
+	margin-left: 25%;
+	margin-right: 25%;
+	width: 50%;
+	margin-top: 10%;
+}
+#login-body{
+    background-color: #654321;
+	background-image: url('../images/browntexture.jpg');
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+	padding: 0px;
+	margin: 0px;
+	height: 1000px;
+}
+.loginrow{
+
+}
+.letter-row{
+	margin-top: 10%;
+
+}
+.btn-danger{
+	border-color: #BC5A15;
+	background-color:rgba(188, 90, 21, 0.45);
+}
+.btn-danger:hover{
+	background-color: #BC5A15;
+	color: white;
+}
+.btn-danger:visited{
+	background-color: #BC5A15;
+	color: white;
+}.btn-danger:active{
+	background-color: #BC5A15;
+	color: white;
+}
+
+.promptsclass{
+	padding: 20px;
+}
+#promptsdiv{
+	text-align:center;
+	background-color: #BC5A15;
+	color: white;
+}
+.logo{
+	margin-top: 80px;
 }
