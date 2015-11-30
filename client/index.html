@@ -34,10 +34,6 @@
     if(loggedIn)
       $(".loggedin").show();
 
-      $("#searchButton").click(function(){
-
-      });
-
      $("#logInButton").click(function(){
        var $div2 = $("#loginMessage");
      if ($div2.is(":visible")) { return; }
@@ -81,7 +77,8 @@
 	<div class = "login">
 	<div class="login-container">
 	<img src="images/name.gif" alt="the pigeon"/>
-			<div class="row">
+	<em> <strong> <h2 id="homepage-slogan"> Slogan here </h2> </strong> </em>
+	<div class="row">
 					<div class="input-group input-group-lg">
 					  <span class="input-group-addon" id="sizing-addon1">Email</span>
 					  <input id="email" type="text" class="form-control" placeholder="Email" aria-describedby="sizing-addon1">
@@ -91,8 +88,8 @@
 					  <input id="password" type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon1">
 					</div>
 					<div class="home-buttons">
-						<button id = "logInButton" type="button" class="btn btn-warning custom-button home-button">Log In</button>
-						<button id = "signUpButton" type="button" class="btn btn-warning custom-button home-button">Sign Up!</button>		<button id = "changeNameButton" style="display:none">Change Name</button>
+						<button id = "logInButton" type="button" class="btn btn-danger custom-button home-button">Log In</button>
+						<button id = "signUpButton" type="button" class="btn btn-danger custom-button home-button">Sign Up!</button>		<button id = "changeNameButton" style="display:none">Change Name</button>
 						<input id = "updateName" style="display:none" placeholder="type name..">
 					</div>
 				</div><!--LOGIN-->
