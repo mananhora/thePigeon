@@ -33,8 +33,6 @@
     'Checking in with your loved ones regularly keeps your relationships fresh and healthy'];
         $(document).ready(function(){
 
-
-
           $("#promptsButton").click(function(){
             var i = Math.floor((Math.random() * 7) + 1);
             $("#prompts").text(prompts[i]);
@@ -52,7 +50,7 @@
                     $("#sendLetter").hide();
                     $("#sent").append("A pigeon is on its way to deliver your letter.");
                 }});
-                alert('A pigeon is on its way');
+                alert('A pigeon is on its way...');
             });
             $("#groupoption").click(function(){
 				$("#groupprint").text("Family");
@@ -98,7 +96,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="letters.html"><span class="glyphicon glyphicon-envelope padding-icon"></span> Inbox- Pigeon Letters</a>
+                        <a href="letters.html"><span class="glyphicon glyphicon-envelope padding-icon"></span> Pigeon Box </a>
                     </li>
                     <li>
                         <a href="groups.html"><span class="glyphicon glyphicon-star padding-icon"></span> Groups</a>
@@ -110,7 +108,7 @@
 					<a href= "broadcast.html">
 						<button type="button" class="btn btn-default btn-md" id="sidebar-button">
 							<span class="glyphicon glyphicon-asterisk padding-icon" aria-hidden="true"></span>
-							Release the Pigeon
+							Release my Pigeon...
 						</button>
 					</a>
 					<img class="logo" src="images/logo.gif"/>
@@ -158,7 +156,7 @@
 						<textarea id = "letter" class="form-control" placeholder="Type your letter here..." id = "letter" name="paragraph_text" cols="10" rows="20"></textarea>
 					</div>
 
-					<button id = "sendButton" type="button" class="btn btn-danger custom-button">Send Pigeon!</button>
+					<button id = "sendButton" type="button" class="btn btn-danger custom-button">Release my Pigeon!</button>
           <button id = "promptsButton" type="button" class="btn btn-danger custom-button">Get prompts</button>
 		<div id="promptsdiv">
           <p id = "prompts"></p>
