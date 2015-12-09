@@ -23,7 +23,24 @@
    if(!$ret){
       echo $db->lastErrorMsg();
    } else {
-      echo " Sweet! You can now send pigeon posts! ";
+      //echo " Sweet! You can now send pigeon posts! ";
+   }
+   // Obtain the userid of the user that was just created, which will be contained in the last row retrieved.
+   $sqlgetuserid = "SELECT userid FROM user";
+   $ret = $db->query($sqlgetuserid);
+   while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
+      $userid = $row['userid'];
+   }
+   // Add two default friends to the account that was previously created.
+   $sqladdfriends = "
+   INSERT INTO friendrequest(senderuserid, receiveruserid) VALUES (".$userid.", 2);
+   INSERT INTO friendrequest(senderuserid, receiveruserid) VALUES (".$userid.", 3);
+   ";
+   $ret = $db->exec($sqladdfriends);
+   if(!$ret){
+      echo $db->lastErrorMsg();
+   } else {
+      echo "Friends added successfully.\n";
    }
    $db->close();
 ?>
