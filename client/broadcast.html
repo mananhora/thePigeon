@@ -46,11 +46,11 @@
                 dataType: "text",
                 data:{usernameVal: localStorage["userloggedin"], letter: $("#letter").val()},
                 success: function(result){
-                    alert('Success! LETTER BROADCASTED'+ result);
+                    //alert('Success! LETTER BROADCASTED'+ result);
                     $("#sendLetter").hide();
                     $("#sent").append("A pigeon is on its way to deliver your letter.");
                 }});
-                alert('A pigeon is on its way...');
+                //alert('A pigeon is on its way...');
             });
             $("#groupoption").click(function(){
 				$("#groupprint").text("Family");
