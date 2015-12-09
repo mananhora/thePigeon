@@ -26,7 +26,8 @@ $(document).ready(function(){
               // Data that will be sent as an input to the test.php script.
               data:{firstname:$("#fname").val(), lastname: $("#lname").val(), email: $("#email").val(), password: $("#password").val()},
               success: function(result){
-                alert(result);
+                //alert(result);
+                window.location = "index.html";
         }});
     });
 });
