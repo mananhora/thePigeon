@@ -23,7 +23,10 @@
      $userid = $row['userid'];
    }
    // Store the letter.
-   $sql = "INSERT INTO letter (content, userid) VALUES ("."'".$_POST["letter"]."'".", '".$userid."')";
+   $lettercontent = $_POST["letter"];
+   $lettercontent = str_replace("'", "", $lettercontent);
+   $lettercontent = str_replace('"', "", $lettercontent);
+   $sql = "INSERT INTO letter (content, userid) VALUES ("."'".$lettercontent."'".", '".$userid."')";
    $ret = $db->exec($sql);
    if(!$ret){
       echo $db->lastErrorMsg();
